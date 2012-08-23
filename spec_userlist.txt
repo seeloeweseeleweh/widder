@@ -1,0 +1,29 @@
+Userlist
+|
++-+
+| |
+| +-+
+| | |
+| | +-+
+| | | |
+| | | +-+
+| | | | | 
+| | | | +-+- Zugang in die Gruppe rein
+| | | | | |
+| | | | | +- Koordinatoren
+| | | | | |
+| | | | | +- Sprecherteam
+| | | | | |
+| | | | | +- Ansprechpartner
+| | | | | |
+| | | | | +- Mitglieder
+| | | | |
+| | | | +-+- Abgang aus der Gruppe raus
+| | | | | |
+| | | | | +- Koordinatoren
+| | | | | |
+| | | | | +- Sprecherteam
+| | | | | |
+| | | | | +- Ansprechpartner
+| | | | | |
+| | | | | +- Mitglieder
