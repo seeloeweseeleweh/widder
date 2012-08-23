@@ -1,0 +1,74 @@
+== Struktur eines Protokolls ==
+
+=== UberMeta === 
+Die "UberMeta"-Ebene, auch die Meta-Ebene der Meta-Ebene, enthält einen URL-
+Dateilink zur Containerdatei des Protokolls. Außerdem noch einen URL-Link
+zur Containerdatei des vorherigen Protokolls. Und, wenn es ein nachfolgendes
+Treffen gibt, dann müsste der Link zu dem Protokoll auch hier rein. (Altes
+Problem... müsste im "Edit" gelöst werden) 
+
+=== Meta === 
+Hier werden die Fragen "Wer?", "Wo?" und "Was?" beantwortet. 
+
+==== Wer? (Gruppe) ====
+Zuerst geht es um die Gruppe, die sich trifft und für die dieses 
+Protokoll verfasst wird. Auch hier ist die URL der Gruppe das Wichtigste.
+Danach kommt eine Liste der Teilnehmer. Diese Personen haben jeweils eine URL 
+und einen Namen. Desweiteren kann auch die Anwesenheit auf dem Treffen 
+nachgehalten werden. 
+Das Datenformat des Zeitraum ist https://en.wikipedia.org/wiki/ISO_8601.
+Ein Protokollant ist immer da, sonst käme das Protokoll nicht zu Stande.
+Der Versammlungsleiter ist optional, die Gäste können den Grund ihrer Anwesen-
+heit angeben und entschuldigte Mitglieder können notiert werden.
+
+==== Wo? (Ort) ====
+Der erste Ort, der geklärt werden muss, ist der Sprachraum, samt Währung und
+Formate. Dies wird mit der Locale von POSIX festgestellt. Danach wird zwischen
+Online und Offline unterschieden. "Online" benötigt eine URL zum Onlinetreffen
+und vielleicht noch eine Namenskette "Mumble, Segelklub" zum Beispiel.
+"Offline" kann, wenn möglich, eine URL zur Location beinhalten, der Name und die
+postalische Anschrift sind definitiv wichtiger. GPS-Koordinaten (longitude, 
+latitude) können auch genannt werden.
+
+==== Wann? (Zeitraum) ====
+Der Zeitraum des Treffens wird mit einem Anfangszeitpunkt und einem Endzeit-
+punkt angegeben. Der verwendete Standart ist der ISO 8601.
+
+==== Was? (Dokumente) ====
+Es wird unterteilt zwischen kollaborative Echzeitdokumente, die während des
+Treffens erarbeitet werden und archivierte Langzeitdokumente.
+Beide werden nur mit Name, Verwendung im Treffen und URL erwähnt. Ihre URL ist
+nur eine Referenz auf rohe Daten. Offline-Dokumente werden nach ISO 690 
+referenziert. 
+Beispiele für kollaborative Echtzeitdokumente: 
+* URL zum Stream
+* URL zum Pad
+Beispiele zu archivierten Langzeitdokumenten
+* URL zu Wikiseiten
+* ?
+Sonstige Dokumente
+* Userlist der Gruppe
+* Links nach ISO 690
+* Referenzen nach ISO 690
+* Bücher nach ISO 690
+
+=== Protokoll ===
+Das Protokoll ist in 2 Teile unterteilt. Den Formalitäten, also Tagesordnungs-
+punkte (TOPe), die immer vorkommen und den Verlauf, also TOPe, die abgearbeitet
+werden.
+ 
+==== Formelles ====
+* Wahl eines Versammlungleiters
+* Wahl eines Protokollanten
+* Genehmigung des letzten Protokolles
+* Genehmigung der Tagesordnungspunkte
+* ?
+
+==== Verlauf ====
+Im Verlauf eines Treffens werden Projekte besprochen. Projekte haben einen 
+Namen und eine Nummer. Sie haben einen auf dem Treffen Vortragenden. Das
+Vorgetragene besteht aus Bericht (Gang, Verlauf), Ergebnis (Erkenntnis, 
+Dokumente, Entscheidung), neue Aufgaben (samt Aufgabenlöser und Zeitfenster).
+Die Projekte selber haben eine eigene Seite. Dort werden auch alles Vorgetra-
+gene gespeichert. Die URL zum Projekt gehört auch ins Protokoll.
+

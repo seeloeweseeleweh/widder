@@ -1,99 +1,112 @@
 2012-08-23 seeloeweseeleweh
 
-+ Struktur eines Protokolls
 |
-+-+- Meta
-| |
-| +-+- Wer?
-| | |
-| | +-+- Organisation
-| | | |
-| | | +- Name der Organisation
-| | | |
-| | | +- URL zur Organisation
-| | | |
-| | | +- URL zur Mitgliederliste der Organisation
-| | | |
-| | | +-+- Zugang in die Organisation rein
-| | | | |
-| | | | +- Koordinatoren
-| | | | |
-| | | | +- Sprecherteam
-| | | | |
-| | | | +- Ansprechpartner
-| | | | |
-| | | | +- Mitglieder
-| | | |
-| | | +-+- Abgang aus der Organisation raus
-| | | | |
-| | | | +- Koordinatoren
-| | | | |
-| | | | +- Sprecherteam
-| | | | |
-| | | | +- Ansprechpartner
-| | | | |
-| | | | +- Mitglieder
-| | |
-| | +-+-+- Person
-| |   | |
-| |   | +- Name (URL zur Person)
-| |   | |  
-| |   | +- Anwesenheit (Startpunkt/Endpunkt): YYYY-MM-DDThh:mm:ssZ/YYYY-MM-DDThh:mm:ssZ, https://en.wikipedia.org/wiki/ISO_8601 
-| |   | 
-| |   +-+- Teilnehmer (während des Protokolls)
-| |     |
-| |     +- Protokollanten
-| |     |
-| |     +- Versammlungsleiter
-| |     |
-| |     +- Mitglieder
-| |     |
-| |     +- Entschuldigt
-| |     |
-| |     +-+- Gäste
-| |       |
-| |       +- Grund des Besuches
-| |
-| +-+- Wo? (Ort)
-| | |
-| | +-+- Locale (https://de.wikipedia.org/wiki/Locale#POSIX)
-| | |
-| | +-+- Online
-| | | |
-| | | +- Domain-, Software-, Chat-, Channelname
-| | | |
-| | | +- URL zum Onlinetreffen
-| | |
-| | +-+- Offline
-| |   |
-| |   +- Adresse
-| |   |
-| |   +- GPS-Koordinaten (longitude, latitude) 
-| | 
-| +-+- Wann? (Zeitraum)
-| | |
-| | +- Start: YYYY-MM-DDThh:mm, https://en.wikipedia.org/wiki/ISO_8601 
-| | |
-| | +- Ende: YYYY-MM-DDThh:mm, https://en.wikipedia.org/wiki/ISO_8601
-| |
-| +-+- Was? (Dokumente)
-|   |
-|   +-+- Kollaborative Echtzeitdokumente, falls vorhanden
-|   | |
-|   | +- URL zum Pad, falls vorhanden
-|   | |
-|   | +- URL zum Stream, falls vorhanden, falls vorhanden
-|   |
-|   +-+- Archivierte Langzeitdokumente, falls vorhanden
-|   | |
-|   | +-+- URL zur Wikiseite, falls vorhanden
-|   | |
-|   | +-+- URL zur anderen Online-Media-Quellen, falls vorhanden
-|   | |
-|   | +-+- Liste von Offline-Quellen (welche Notation? BibTeX), falls vorhanden
-|   |
-|   +- Vorheriges Protokoll, falls vorhanden
-|   |
-|   +- Nächstes Protokoll, falls vorhanden
-|   
-^
++-+- Struktur eines Protokolls
+  |
+  +-+- UberMeta 
+  | |
+  | +- URL zu dieser Containerdatei
+  | |
+  | +- URL zur Containerdatei des vorherigen Protokolls
+  | |
+  | +- URL zu Containerdatei des nächsten Protokolls
+  |
+  +-+- Meta
+  | |
+  | +-+- Wer?
+  | | |
+  | | +-+- Gruppe
+  | | | |
+  | | | +- URL zur Gruppe, obligatorisch.
+  | | | |
+  | | | +- Name der Gruppe 
+  | | |
+  | | +-+-+- Person
+  | |   | |
+  | |   | +- URL zur Person
+  | |   | |  
+  | |   | +- Name zur Person
+  | |   | |  
+  | |   | +- Anwesenheit (Startpunkt/Endpunkt): YYYY-MM-DDThh:mm:ssZ/YYYY-MM-DDThh:mm:ssZ, https://en.wikipedia.org/wiki/ISO_8601 
+  | |   | 
+  | |   +-+- Protokollanten, obligatorisch
+  | |   |
+  | |   +-+- Versammlungsleiter
+  | |   |
+  | |   +-+-+- Gäste
+  | |   | |
+  | |   | +- Grund der Anwesenheit
+  | |   |
+  | |   +- Entschuldigt
+  | |
+  | +-+- Wo? (Ort)
+  | | |
+  | | +-+- Nächstes Treffen (Ort)
+  | | |
+  | | +-+- Locale (https://de.wikipedia.org/wiki/Locale#POSIX)
+  | | |
+  | | +-+- Online
+  | | | |
+  | | | +- Domain-, Software-, Chat-, Channelname
+  | | | |
+  | | | +- URL zum Onlinetreffen
+  | | |
+  | | +-+- Offline
+  | |   |
+  | |   +- Adresse
+  | |   |
+  | |   +- GPS-Koordinaten (longitude, latitude) 
+  | | 
+  | +-+- Wann? (Zeitraum)
+  | | |
+  | | +- Start: YYYY-MM-DDThh:mm, https://en.wikipedia.org/wiki/ISO_8601 
+  | | |
+  | | +- Ende: YYYY-MM-DDThh:mm, https://en.wikipedia.org/wiki/ISO_8601
+  | |
+  | +-+- Was? (Dokumente)
+  |   |
+  |   +-+- Kollaborative Echtzeitdokumente
+  |   | |
+  |   | +- URL zum Pad, falls vorhanden
+  |   | |
+  |   | +- URL zum Stream, falls vorhanden, falls vorhanden
+  |   |
+  |   +-+- URL zur Userlist der Gruppe
+  |   |
+  |   +-+- Links, Referenzen, Bücher usw.
+  |
+  +-+- Protokoll
+    |
+    +-+- Formelles
+    | |
+    | +- Wahl eines Versammlungleiters
+    | |
+    | +- Wahl eines Protokollanten
+    | |
+    | +- Genehmigung des letzten Protokolles
+    | |
+    | +- Genehmigung der Tagesordnungspunkte
+    |
+    +-+- Verlauf
+      |
+      +-+- Projekt
+        |
+        +- Name
+        |
+        +- URL des Projektes
+        |
+        +-+- Verantwortlicher
+        | |
+        | +- Name
+        | |
+        | +- URL zur Person
+        | 
+        +-+ Text
+          |
+          +- Bericht
+          |
+          +- Ergebnis
+          |
+          +- ToDos      
+
+
