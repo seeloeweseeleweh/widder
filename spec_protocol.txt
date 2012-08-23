@@ -10,6 +10,8 @@
   | +- URL zur Containerdatei des vorherigen Protokolls
   | |
   | +- URL zu Containerdatei des nächsten Protokolls
+  | |
+  | +- Hashwert des Protokolls (nicht UberMeta, nicht Meta)
   |
   +-+- Meta
   | |
@@ -85,6 +87,8 @@
     | |
     | +- Genehmigung des letzten Protokolles
     | |
+    | +- Verschicken des letzten Protokolles
+    | |
     | +- Genehmigung der Tagesordnungspunkte
     |
     +-+- Projekt
@@ -92,6 +96,8 @@
       +- Name
       |
       +- URL des Projektes
+      |
+      +- Klassifikation des Projektes nach einer Systematik von Bibliotheken (UDC)
       |
       +-+- Verantwortlicher
       | |
